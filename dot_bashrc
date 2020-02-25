@@ -93,7 +93,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias sudo='sudo -E '
-alias kamcmd='sudo -E kamcmd '
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -103,6 +102,9 @@ alias kamcmd='sudo -E kamcmd '
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+
+for f in ~/.bashrc_include/*; do source $f; done
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -115,6 +117,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:/opt/mssql-tools/bin"
 export EDITOR="vim"
 
