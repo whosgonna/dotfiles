@@ -1,2 +1,3 @@
 .ssh/known_hosts
 .bashrc_include/*
+!.bashrc_include/includes
