@@ -32,3 +32,7 @@ highlight Statement ctermfg=3
 ""syntax highlighting for TT
 au BufNewFile,BufRead *.tt setf tt2html
 autocmd FileType tt2html setlocal shiftwidth=2 tabstop=2 autoindent smartindent
+
+" Disable annoying beeping
+set noerrorbells
+set vb t_vb=
