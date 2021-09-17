@@ -30,4 +30,4 @@ func! s:cfgType()
 endfunc
 
 au BufNewFile,BufRead *.cfg   call s:cfgType()
-
+au BufNewFile,BufRead *.k     call s:cfgType()
