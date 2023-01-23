@@ -118,3 +118,4 @@ hi def link kamailioHTTPMethods Special
 hi def link kamailioSIPHeaders Special
 
 let b:current_syntax = "kamailio"
+autocmd BufEnter * :syntax sync fromstart
