@@ -27,6 +27,9 @@ func! s:cfgType()
       elseif getline(n) =~ '^\s*failure_route\s*\({\|[\)\s*'
          set filetype=kamailio
          return
+      elseif getline(n) =~ '^\s*event_route\s*\({\|[\)\s*'
+         set filetype=kamailio
+         return
       endif
    endfor
    setf cfg

@@ -37,7 +37,20 @@ syn match	kamailioOperator		'!\|&&\|||\|=[~=]\?\|>\|<\|+\|-\|/\|\*\||\|&\|^\|\~'
 syn keyword	kamailioOperatorWord  defined eq ieq ne ine mod and or not contained
 
 syn region	kamailioCppComment		start='/\*' end='\*/' contains=kamailioTodo
-syn match	kamailioHashDefine	'#!define\s\|#!ifdef\s\|#!ifndef\s\|#!endif\|#!else\|#!substdef\|#!substdefs\|#!subst\|#!trydef\|#!trydefine\|#!redef\|#!redefine\|#!defenv\|!!define\s\|!!ifdef\s\|!!ifndef\s\|!!endif\|!!else\|!!substdef\|!!substdefs\|!!subst\|!!trydef\|!!trydefine\|!!redef\|!!redefine\|!!defenv\|#!KAMAILIO\|#!OPENSER\|#!SER\|#!MAXCOMPAT\|#!ALL\|#!include_file\|#!import_file\|!!include_file\|!!import_file\|include_file\|import_file'
+syn match	kamailioHashDefine	'#!KAMAILIO\|#!OPENSER\|#!SER\|#!MAXCOMPAT\|#!ALL\
+            \|[#!]!define\s\
+            \|[#!]!ifn\?def\s\
+            \|[#!]!else\
+            \|[#!]!endif\
+            \|[#!]!substdefs\?\
+            \|[#!]!subst\
+            \|[#!]!trydef\(ine\|env\)\?\
+            \|[#!]!redef\(ine\)\?\
+            \|[#!]!defenv\
+            \|[#!]!defexp\(s\)?\
+            \|\([#!]!\)\?include_file\
+            \|\([#!]!\)\?import_file'
+
 " syn match	kamailioHashDefine	'^\s*#!.+$'
 syn match	kamailioHashComment	'#[^!].*$\|#$' contains=kamailioTodo
 syn match	kamailioSlashSlashComment	'//.*$\|//#$' contains=kamailioTodo

@@ -36,3 +36,7 @@ autocmd FileType tt2html setlocal shiftwidth=2 tabstop=2 autoindent smartindent
 " Disable annoying beeping
 set noerrorbells
 set vb t_vb=
+
+
+" Automatically remove trailing whtespace:
+autocmd BufWritePre * :%s/\s\+$//e
